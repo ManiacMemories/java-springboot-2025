@@ -170,3 +170,90 @@
     - for문, while문 내에서 사용
     - break - 조건에 맞아 반복문을 탈출할 때
     - continue - 특수 조건만 비켜서 반복문을 계속할 때
+
+#### 배열
+- 여러 데이터가 필요할 경우 하나의 변수로 처리 가능
+
+
+
+#### 객체/클래스
+- 객체 개요
+    - 현실세계를 반영하여 프로그래밍을 하는 기법
+    - Object-Oriented Programming - OOP, 객체지향 프로그래밍
+        - C++, Java, Python, C#, Go, Rust, Kotlin ...
+    - vs. Procedure-Oriented Programming - 절차적 프로그래밍
+        - C, SQL, ...
+
+- 클래스 개요
+    - 객체를 정의하는 틀
+    - 명사(멤버변수/속성)와 동사(멤버메서드)의 집합
+
+    ```java
+    class NewCar {
+        // 명사부분 (멤버변수/속성)
+        String model_name;
+        String company;
+        String color;
+        int release_year;
+        String fuel_type;
+
+        // 동사부분(메서드)
+        public void doaccelerate() { // 가속
+        }
+
+        public void dobreak() { // 중지
+        }
+
+        public void changeGear() { // 기어변동
+        }
+
+        public void turnLeft() { // 좌회전
+        }
+
+        public void turnRight() { // 우회전전
+        }
+
+        // 생성자 메서드(파이썬 __init__와 유사)
+        NewCar() {
+            model_name = "없음";
+            company = "현대자동차";
+        }
+        NewCar(String model_name, String company, int release_year) {
+            this.model_name = model_name;
+            this.company = company;
+            this.release_year = release_year;
+        }
+    }
+    ```
+
+- 인스턴스(instance)
+    - 객체를 만드는 클래스를 new로 새로 생성
+    - 두개의 인스턴스 하나를 가르칠 수 없음
+
+    ```java
+    NewCar avante = new NewCar();   // 
+    NewCar tesla = new NewCar("X3", "Tesla", 2021);
+
+    tesla.trunRight(); // 우회전
+    ```
+
+
+#### 상속
+- 개요    
+    - 객체지향에 중요한 의미의 개념
+    - 부모클래스가 가지고 있는 속성, 메서드를 가져다 쓸 수 있는 기능
+    - 예 - 동물 -> 포유류, 양서류, 파충류 등으로 분류
+
+- 특징
+    - 부모(슈퍼)클래스에서 정의된 변수와 메서드를 물려받는다
+    - 새로운 변수와 메서드를 추가할 수 있다
+    - 부모클래스에서 물려받은 메서드를 수정할 수 있다(오버라이딩)
+    - 동일한 부모클래스를 상속받은 하위 자식클래스들은 타입이 호환된다.
+
+    ```java
+    [접근제어자] class 클래스명 extends 부모클래서명 {
+        // 부모클래스에 없는 멤버변수, 메서드 추가
+        // 부모 메서드를 오버라이딩
+    }
+    ```
+
