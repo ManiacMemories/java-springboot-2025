@@ -53,7 +53,53 @@
 
 ## 3일차
 
+### Spring Boot Build Tool
+- 개요
+    - 프로젝트 빌드 과정을 자동화시켜주는 도구
+    - 컴파일, 테스트, 패키징, 의존성 관리, 배포 등등 포함
+
+- Maven
+    1. Java프로젝트 기본 빌드도구
+    2. Maven Repository
+    3. 빌드, 패키징(jar / war 파일 생성), 테스트 등을 한번의 명령으로 간편하게 처리
+    4. 가장 큰 특징이 외부 라이브러리 자동으로 다운로드, 관리
+    5. pom.xml(Project Object Model) 파일로 빌드 설정을 관리
+        - 초기설정시 빠졌거나, 추가되어야 하면 xml 코딩으로 추가
+    6. VS Code 확장 중 Maven Dependency Explorer 등으로 확인
+
+- Gradle
+    1. 안드로이드용 오픈소스 빌드 도구
+    2. Maven Repository를 같이 사용
+    3. Maven의 3, 4번 특징을 그대로 가지고 있음
+    4. build,gradle 파일 사용, Groovy 스크립트 지원
+    5. 빌드과정을 병렬처리, 캐싱사용으로 Maven보다 10 ~ 100배 향상된 성능 구현
+
+### Gradle 설정
+- Gradle로 프로젝트가 제대로 동작하지 않으면
+    - 
+
+### Spring Boot 로그 설정
+- Spring Boot를 colorizing 해주는 기능
+- src/resources/application.properties
+
+    ```shell
+    spring.output.ansi.enable=always
+    ```
+- 서버 재시작
+
+
 ## 4일차
+- 기초문법 마무리
+    - [JAVA기초문법](./JAVA_BASIC.md)
+    - 제네릭, 컬렉션 프레임워크, 입출력, 람다식, 스트림API
+
+- Spring Boot 시작
+- Gradle 오류 해결방법
+    - [Gradle](https://gradle.org/install/)
+    - C:\Gradle 위치에 압축해제
+    - sysdm.cpl 환경변수 GRADEL_HOME 경로 입력, 확인(JAVA_HOME과 동일)
+    - VS Code 설정
+- [Java문법실습](./day03/spring04/src/main/java/com/jh99/spring04/Spring04Application.java)
 
 ## 5일차
 
